@@ -166,6 +166,7 @@ def print_offsets(filename):
         with open(path, "r") as f:
             data = json.load(f)
             json.dump(data, sys.stdout, indent=2)
+            print("")
     except Exception as e:
         print(f"Failed to read {path}")
         print(e)
