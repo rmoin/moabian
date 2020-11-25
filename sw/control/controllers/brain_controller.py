@@ -163,6 +163,8 @@ class BrainController(IController):
         )
 
         observables = {
+            # Stateful brains require agent id for episode coherence.
+            ".agentId": "0",
             # BonsaiMoabSimV4
             "elapsed_time": elapsedSec,
             "plate_theta_x": math.radians(self.currPlateAngles.x),
