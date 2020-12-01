@@ -166,7 +166,11 @@ class BrainController(IController):
             # Stateful brains require agent id for episode coherence.
             ".agentId": "0",
             # BonsaiMoabSimV4
+            # Elapsed time actually should be the time since the beginning of episode, but it is not
+            # useful for training/prediction as there's no prediction episode segmentation for MOAB
+            # as of right now
             "elapsed_time": elapsedSec,
+            "step_time": elapsedSec,
             "plate_theta_x": math.radians(self.currPlateAngles.x),
             "plate_theta_y": math.radians(self.currPlateAngles.y),
             "ball_x": ball.center.x,
