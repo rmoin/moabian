@@ -1,3 +1,4 @@
 imagezmq
 imutils
 werkzeug
+flask

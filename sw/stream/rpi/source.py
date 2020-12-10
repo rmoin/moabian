@@ -19,5 +19,4 @@ while True:
     ret_code, jpg_buf = cv2.imencode(".jpg", image,
         [int(cv2.IMWRITE_JPEG_QUALITY), 50])
 
-    #sender.send_image("moab", image)
-    sender.send_image("moab", jpg_buf)
+    sender.send_jpg("moab", jpg_buf)
