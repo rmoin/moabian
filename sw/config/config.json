@@ -57,10 +57,8 @@
             "frequencyHz": 30,
             "debug": true,
             "debugDecorator": {
-                "name": "control.debug.X11Decorator",
-                "windowName": "frame",
-                "width": 256,
-                "height": 256
+                "name": "control.debug.FileDecorator",
+                "filename": "/tmp/camera/frame.jpg"
             },
             "sensor": {
                 "name": "control.sensors.OpenCVCameraSensor",
@@ -83,7 +81,9 @@
                 "brightness": 60,
                 "contrast": 50,
                 "saturation": 45,
-                "gain": 0
+                "gain": 0,
+                "width": 256,
+                "height": 256
             },
             "detectors": {
                 "ball": {
@@ -93,23 +93,13 @@
             },
             "debug": true,
             "debugDecorator": {
-                "name": "control.debug.MQDecorator",
-                "windowName": "frame",
-                "width": 256,
-                "height": 256,
-                "uri": "tcp://192.168.1.251:5555"
+                "name": "control.debug.FileDecorator",
+                "filename": "/tmp/camera/frame.jpg"
             }
         },
         "classic": {
-            "frequencyHz": 30,
-            "debug": true,
-            "debugDecorator": {
-                "name": "control.debug.X11Decorator",
-                "windowName": "frame",
-                "width": 256,
-                "height": 256
-            },
-            "sensor": {
+           "frequencyHz": 30,
+           "sensor": {
                 "name": "control.sensors.OpenCVCameraSensor",
                 "brightness": 60,
                 "contrast": 50,
