@@ -10,3 +10,6 @@ tools
 .Python
 **/node_modules
 Dockerfile
+*.so
+*.so.*
+*.o
